@@ -44,7 +44,7 @@
             <router-view style="min-height: 100%; padding: 50px 50px;"></router-view>
         </a-layout-content>
         <a-layout-footer style="text-align: center">
-            Ant Design ©2018 Created by Ant UED
+            ZJU 软件工程 项目实训 2020 Created by G24
         </a-layout-footer>
     </a-layout>
 </template>

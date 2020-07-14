@@ -15,6 +15,7 @@
                         </a-form-item>
                         <a-form-item>
                             <a-button type="primary" html-type="submit" block>登录</a-button>
+                            <a-button block @click="()=>{this.$router.push({name:'register'})}">注册</a-button>
                         </a-form-item>
                     </a-form>
                 </a-card>

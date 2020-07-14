@@ -72,22 +72,16 @@
                 }).then(res => {
                     this.loading=false;
                     let temp = []
-                    let kk = 0;
-                    for(let x of res.data) {
+                    for(let x of this.listData) {
                         x.picture = x.picture.split('\n');
-                        for (let i=0;i<x.picture.length;++i) {
-                            //this.$set(x.picture, i, x.picture[i].substr(x.picture[i].indexOf(':')+1));
-                            this.$set(x.picture, i, '/pic' + kk % 3 + '.jpg')
-                            kk++;
-                        }
-
+                        for (let i=0;i<x.picture.length;++i)
+                            this.$set(x.picture, i, x.picture[i].substr(x.picture[i].indexOf(':')+1));
                     }
                     for(let i=0;i<res.data.length;++i) {
                         if (this.filterPrice  && (res.data[i].price > this.high || res.data[i].price < this.low)) continue;
                         temp.push(res.data[i])
                     }
                     this.listData=temp
-                    console.log(this.listData);
                 })
             },
             lowChange: function (value) {
